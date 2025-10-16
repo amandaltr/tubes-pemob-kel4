@@ -5,13 +5,13 @@ Cuanly
 ### Deskripsi Singkat Aplikasi:
 Cuanly adalah aplikasi manajemen keuangan pribadi yang membantu pengguna mencatat pemasukan dan pengeluaran harian atau bulanan dengan mudah. Aplikasi ini dirancang untuk membantu mengontrol anggaran, memahami kebiasaan finansial, dan mencapai tujuan keuangan dengan lebih efektif.
 
-        Anggota Kelompok:
-        Ester P. Butar-Butar (231402014)
-        Grace Kristiani Siregar (231402035)
-        Joyceline Octavia (231402041)
-        Lia Damayana Saragih (231402044)
-        Valencia Browlim (231402077)
-        Amanda Uli Lumbantoruan (231402093)
+#### Anggota Kelompok:
+Ester P. Butar-Butar (231402014)
+Grace Kristiani Siregar (231402035)
+Joyceline Octavia (231402041)
+Lia Damayana Saragih (231402044)
+Valencia Browlim (231402077)
+Amanda Uli Lumbantoruan (231402093)
         
 ### Fitur yang Akan Ada di Aplikasi:
 Catat Transaksi Harian ⇒ Mencatat pemasukan dan pengeluaran secara cepat dengan kategori seperti makanan, transportasi, hiburan, dan lainnya.
