@@ -3,7 +3,7 @@
 BudgetIn
 
 ### Deskripsi Singkat Aplikasi:
-Cuanly adalah aplikasi manajemen keuangan pribadi yang membantu pengguna mencatat pemasukan dan pengeluaran harian atau bulanan dengan mudah. Aplikasi ini dirancang untuk membantu mengontrol anggaran, memahami kebiasaan finansial, dan mencapai tujuan keuangan dengan lebih efektif.
+BudgetIn adalah aplikasi manajemen keuangan pribadi yang membantu pengguna mencatat pemasukan dan pengeluaran harian atau bulanan dengan mudah. Aplikasi ini dirancang untuk membantu mengontrol anggaran, memahami kebiasaan finansial, dan mencapai tujuan keuangan dengan lebih efektif.
 
 #### Anggota Kelompok:
         Ester P. Butar-Butar (231402014)
