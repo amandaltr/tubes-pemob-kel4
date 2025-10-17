@@ -15,6 +15,7 @@ BudgetIn adalah aplikasi manajemen keuangan pribadi yang membantu pengguna menca
         
 ### Fitur yang Akan Ada di Aplikasi:
 Catat Transaksi Harian ⇒ Mencatat pemasukan dan pengeluaran secara cepat dengan kategori seperti makanan, transportasi, hiburan, dan lainnya.
+
 Ringkasan Bulanan (Grafik) ⇒ Menampilkan total pemasukan, pengeluaran, dan saldo akhir dalam grafik atau tabel yang mudah dipahami.
 Kategori & Anggaran ⇒ Menetapkan batas pengeluaran per kategori agar pengguna bisa menjaga pengeluaran tetap sesuai rencana.
 Kategori Pengeluaran : Makanan & Minuman, Tagihan Rumah, Transportasi, Tempat Tinggal, Lifestyle, Pendidikan.
