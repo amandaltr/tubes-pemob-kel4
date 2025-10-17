@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'splash.dart';
 import 'login.dart';
+import 'register.dart';
+import 'dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,32 +14,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Budgetin App',
+      title: 'BudgetIn App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      initialRoute: '/', // Mulai dari splash
+      initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
-        '/login': (context) => const LoginScreen(),
-
+        '/login': (context) => const LoginPage(),
+        '/register': (context) => const RegisterPage(),
+        '/dashboard': (context) => const DashboardPage(),
       },
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Home Page')),
-      body: const Center(
-        child: Text('Selamat datang di Halaman Utama!'),
-      ),
     );
   }
 }

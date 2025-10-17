@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   bool _obscurePassword = true;
 
@@ -23,7 +25,6 @@ class _LoginPageState extends State<LoginPage> {
             child: ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 400),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // --- Logo ---
@@ -32,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
 
                   // --- Judul ---
                   const Text(
-                    'Login',
+                    'Sign Up',
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -40,16 +41,17 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   const SizedBox(height: 10),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("Don’t have an account? "),
+                      const Text("Already have an account? "),
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, '/register');
+                          Navigator.pushReplacementNamed(context, '/login');
                         },
                         child: const Text(
-                          "Sign Up",
+                          "Log In",
                           style: TextStyle(color: Colors.blue),
                         ),
                       ),
@@ -57,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 30),
 
-                  // --- Input Email ---
+                  // --- Email ---
                   TextField(
                     controller: _emailController,
                     keyboardType: TextInputType.emailAddress,
@@ -75,7 +77,41 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 20),
 
-                  // --- Input Password ---
+                  // --- Nama Lengkap ---
+                  TextField(
+                    controller: _nameController,
+                    decoration: InputDecoration(
+                      labelText: "Full Name",
+                      prefixIcon: const Icon(Icons.person_outline),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                        vertical: 15,
+                        horizontal: 10,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+
+                  // --- Username ---
+                  TextField(
+                    controller: _usernameController,
+                    decoration: InputDecoration(
+                      labelText: "Username",
+                      prefixIcon: const Icon(Icons.account_circle_outlined),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                        vertical: 15,
+                        horizontal: 10,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+
+                  // --- Password ---
                   TextField(
                     controller: _passwordController,
                     obscureText: _obscurePassword,
@@ -103,21 +139,9 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 30),
 
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: const Text(
-                        "Forgot Password?",
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-
-                  // --- Tombol Login ---
+                  // --- Tombol Sign Up ---
                   SizedBox(
                     width: double.infinity,
                     height: 50,
@@ -129,22 +153,29 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       onPressed: () {
-                        // validasi sederhana (opsional)
                         if (_emailController.text.isNotEmpty &&
+                            _nameController.text.isNotEmpty &&
+                            _usernameController.text.isNotEmpty &&
                             _passwordController.text.isNotEmpty) {
-                          Navigator.pushReplacementNamed(
-                              context, '/dashboard'); // ← ubah ke /dashboard
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                  'Account created successfully! Please log in.'),
+                              backgroundColor: Colors.green,
+                            ),
+                          );
+                          Navigator.pushReplacementNamed(context, '/login');
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
-                              content: Text('Please enter email and password'),
+                              content: Text('Please fill all fields'),
                               backgroundColor: Colors.redAccent,
                             ),
                           );
                         }
                       },
                       child: const Text(
-                        "Log In",
+                        "Sign Up",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,

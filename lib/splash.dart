@@ -1,30 +1,34 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashPageState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashPageState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 15), () {
-      Navigator.pushNamed(context, '/home');
+    Timer(const Duration(seconds: 10), () {
+      Navigator.pushReplacementNamed(context, '/login');
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF3629B7),
+      backgroundColor: const Color(0xFF3629B7),
       body: Center(
-        child: Image.asset(
-          'assets/logo/logo.png',
-          width: 200,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // --- Logo ---
+            Image.asset('assets/logo/logo.png', height: 100),
+            const SizedBox(height: 25),
+          ],
         ),
       ),
     );
