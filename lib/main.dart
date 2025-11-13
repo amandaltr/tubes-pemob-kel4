@@ -1,5 +1,19 @@
 import 'package:flutter/material.dart';
 
+<<<<<<< HEAD
+=======
+// Import file-file di folder 'screen'
+import 'screen/features/splash.dart';
+import 'screen/statistic/dashboard.dart';
+
+// Import file-file di folder 'screen/auth'
+import 'screen/auth/login.dart';
+import 'screen/auth/register.dart';
+
+
+import 'screen/wishes/wishes.dart';
+
+>>>>>>> 55f835b (Commit III)
 void main() {
   runApp(const MyApp());
 }
@@ -7,6 +21,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+<<<<<<< HEAD
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -117,6 +132,27 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+=======
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'BudgetIn App',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
+      ),
+
+      // Route awal diarahkan ke SplashScreen
+      initialRoute: '/wishes',
+      routes: {
+       // '/splash': (context) => const SplashScreen(),
+       // '/login': (context) => const LoginPage(),
+      //  '/register': (context) => const RegisterPage(),
+        '/wishes': (context) => const WishesScreen(), // Tambahkan ini
+      },
+
+>>>>>>> 55f835b (Commit III)
     );
   }
 }
