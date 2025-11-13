@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # buudgetin_app
 
 A new Flutter project.
@@ -16,6 +17,8 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 =======
+=======
+>>>>>>> 02e76ea4566ff0c9e7043ce006bf1ab008af1fa8
 # TUGAS-BESAR-PEMROGRAMAN-MOBILE-KOM-B-KELOMPOK-4
 ### Nama Aplikasi:
 BudgetIn
@@ -45,4 +48,7 @@ Proyek ini bertujuan untuk membuat aplikasi sederhana yang memungkinkan pengguna
 
 ### Native Platform = Flutter
 ### Version SDK/JDK Flutter SDK: 3.35.4 Dart SDK: 3.9.2 Android SDK: 34 JDK: 17 IDE: Android Studio
+<<<<<<< HEAD
 >>>>>>> 55f835b (Commit III)
+=======
+>>>>>>> 02e76ea4566ff0c9e7043ce006bf1ab008af1fa8

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -14,6 +15,13 @@ import 'screen/auth/register.dart';
 import 'screen/wishes/wishes.dart';
 
 >>>>>>> 55f835b (Commit III)
+=======
+import 'splash.dart';
+import 'login.dart';
+import 'register.dart';
+import 'dashboard.dart';
+
+>>>>>>> 02e76ea4566ff0c9e7043ce006bf1ab008af1fa8
 void main() {
   runApp(const MyApp());
 }
@@ -21,6 +29,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // This widget is the root of your application.
   @override
@@ -133,6 +142,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
 =======
+=======
+>>>>>>> 02e76ea4566ff0c9e7043ce006bf1ab008af1fa8
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -142,6 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
+<<<<<<< HEAD
 
       // Route awal diarahkan ke SplashScreen
       initialRoute: '/wishes',
@@ -153,6 +165,15 @@ class _MyHomePageState extends State<MyHomePage> {
       },
 
 >>>>>>> 55f835b (Commit III)
+=======
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/login': (context) => const LoginPage(),
+        '/register': (context) => const RegisterPage(),
+        '/dashboard': (context) => const DashboardPage(),
+      },
+>>>>>>> 02e76ea4566ff0c9e7043ce006bf1ab008af1fa8
     );
   }
 }
