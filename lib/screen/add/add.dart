@@ -9,8 +9,8 @@ class AddScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-          "Ini Halaman Jelajahi",
-          style: TextStyle(color: Colors.white, fontSize: 25),
+          "Ini Halaman Add",
+          style: TextStyle(color: Colors.black, fontSize: 25),
         ),
       ),
     );

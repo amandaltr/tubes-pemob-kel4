@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-// Import file-file di folder 'screen'
+// ==== IMPORT SCREEN ====
 import 'screen/features/splash.dart';
-import 'screen/statistic/dashboard.dart';
-
-// Import file-file di folder 'screen/auth'
+import 'screen/features/navbar.dart';
 import 'screen/auth/login.dart';
-import 'screen/auth/register.dart';
 
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-import 'screen/wishes/wishes.dart';
+  await Firebase.initializeApp();
 
-void main() {
   runApp(const MyApp());
 }
 
@@ -21,22 +21,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'BudgetIn App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-      ),
+      title: 'BudgetIn App',
 
-      // Route awal diarahkan ke SplashScreen
-      initialRoute: '/wishes',
+      // Routing
+      initialRoute: '/home',
+
       routes: {
-        '/splash': (context) => const SplashScreen(),
-        '/login': (context) => const LoginPage(),
-        '/register': (context) => const RegisterPage(),
-        '/wishes': (context) => const WishesScreen(), // Tambahkan ini
+        '/splash': (_) => const SplashScreen(),
+        '/login': (_) => const LoginScreen(),
+        // '/register': (_) => const SignUpScreen(),
+        '/home': (_) => const Navbar(),
       },
-
     );
   }
 }
